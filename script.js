@@ -1,3 +1,4 @@
+// Definición de excusas, entrenamientos, chistes y más
 const excuses = [
     "No entrené porque me quedé dormido con el teléfono en la mano.",
     "Estaba muy cansado después de levantar demasiadas pesas.",
@@ -33,40 +34,74 @@ const memes = [
     "https://via.placeholder.com/500x300/ff5722/ffffff?text=No+hay+descanso+para+los+Mega+Boys!"
 ];
 
+// Función para generar una excusa aleatoria
 document.getElementById("excuse-button").addEventListener("click", function() {
     const randomExcuse = excuses[Math.floor(Math.random() * excuses.length)];
-    document.getElementById("excuse-output").textContent = randomExcuse;
+    const output = document.getElementById("excuse-output");
+    output.textContent = randomExcuse;
+    output.classList.add('fade-in');  // Añadir animación de desvanecimiento
+    setTimeout(() => output.classList.remove('fade-in'), 500);  // Quitar animación después de que termine
 });
 
+// Función para generar un entrenamiento aleatorio
 document.getElementById("workout-button").addEventListener("click", function() {
     const randomWorkout = workouts[Math.floor(Math.random() * workouts.length)];
-    document.getElementById("workout-output").textContent = randomWorkout;
+    const output = document.getElementById("workout-output");
+    output.textContent = randomWorkout;
+    output.classList.add('zoom-in');  // Añadir animación de zoom
+    setTimeout(() => output.classList.remove('zoom-in'), 500);  // Quitar animación después de que termine
 });
 
+// Función para contar un chiste aleatorio
 document.getElementById("joke-button").addEventListener("click", function() {
     const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
-    document.getElementById("joke-output").textContent = randomJoke;
+    const output = document.getElementById("joke-output");
+    output.textContent = randomJoke;
+    output.classList.add('slide-in');  // Añadir animación de deslizamiento
+    setTimeout(() => output.classList.remove('slide-in'), 500);  // Quitar animación después de que termine
 });
 
+// Función para mostrar un hecho aleatorio
 document.getElementById("fact-button").addEventListener("click", function() {
     const randomFact = facts[Math.floor(Math.random() * facts.length)];
-    document.getElementById("fact-output").textContent = randomFact;
+    const output = document.getElementById("fact-output");
+    output.textContent = randomFact;
+    output.classList.add('fade-in');
+    setTimeout(() => output.classList.remove('fade-in'), 500);
 });
 
+// Función para mostrar un meme aleatorio
 document.getElementById("meme-button").addEventListener("click", function() {
     const randomMeme = memes[Math.floor(Math.random() * memes.length)];
-    document.getElementById("meme-output").innerHTML = `<img src="${randomMeme}" alt="Meme Mega Boys" />`;
+    const output = document.getElementById("meme-output");
+    output.innerHTML = `<img src="${randomMeme}" alt="Meme Mega Boys" class="meme-image" />`;
+    output.classList.add('meme-zoom');
+    setTimeout(() => output.classList.remove('meme-zoom'), 500);  // Zoom en el meme
 });
 
+// Función para mostrar una respuesta de encuesta
 document.getElementById("poll-button").addEventListener("click", function() {
     const pollAnswer = "Press de banca, ¡sin duda!";
-    document.getElementById("poll-output").textContent = pollAnswer;
+    const output = document.getElementById("poll-output");
+    output.textContent = pollAnswer;
+    output.classList.add('slide-in');
+    setTimeout(() => output.classList.remove('slide-in'), 500);
 });
 
+// Función para unirse al club de fans
 document.getElementById("join-fanclub-button").addEventListener("click", function() {
-    document.getElementById("fanclub-output").textContent = "¡Bienvenido al club de fans de Mega Boys! ¡Vamos por esos músculos!";
+    const fanclubOutput = document.getElementById("fanclub-output");
+    fanclubOutput.textContent = "¡Bienvenido al club de fans de Mega Boys! ¡Vamos por esos músculos!";
+    fanclubOutput.classList.add('fanclub-message');
+    setTimeout(() => fanclubOutput.classList.remove('fanclub-message'), 500);  // Efecto de bienvenida
 });
 
+// Función de contacto
 document.getElementById("contact-link").addEventListener("click", function() {
     alert("¡Gracias por contactarnos! ¡Nos encanta conectar con nuestros fans!");
+});
+
+// Función de animación de página
+window.addEventListener("load", function() {
+    document.body.classList.add('page-loaded');
 });
