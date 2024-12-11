@@ -1,154 +1,144 @@
-/* Reset General */
-* {
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    overflow-x: hidden;  /* Evitar desbordamientos horizontales */
 }
 
-/* Body */
-body {
-    font-family: 'Rubik Mono One', sans-serif;
-    background: linear-gradient(45deg, #ff5722, #ff9800);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
+/* Animaciones */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Header */
-header {
-    background-color: #ff5722;
-    padding: 30px;
-    border-radius: 15px;
-    margin-top: 10%;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+.zoom-in {
+    animation: zoomIn 0.5s ease-in-out;
 }
 
-header h1 {
-    font-size: 3em;
-    font-family: 'Fredericka the Great', cursive;
-    margin-bottom: 10px;
+.slide-in {
+    animation: slideIn 0.5s ease-in-out;
 }
 
-header p {
-    font-size: 1.5em;
-    font-weight: bold;
+.meme-zoom {
+    animation: memeZoom 0.5s ease-in-out;
 }
 
-/* Content */
-.content {
-    width: 80%;
-    max-width: 800px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    margin-top: 20px;
+.fanclub-message {
+    animation: fanclubMessage 0.5s ease-in-out;
 }
 
-h2 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
+.page-loaded {
+    animation: pageLoad 1s ease-in-out;
 }
 
-/* Button Container */
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+/* Definir las animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.action-button {
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes memeZoom {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes fanclubMessage {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos de botones */
+.button-container button {
     background-color: #ff9800;
     color: white;
     padding: 12px 25px;
+    margin: 12px;
     border: none;
-    border-radius: 25px;
-    font-size: 1.3em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    flex-grow: 1;
-    max-width: 300px;
-}
-
-.action-button:hover {
-    background-color: #ff5722;
-}
-
-/* Outputs */
-.output div {
-    margin-top: 20px;
-    font-size: 1.5em;
-}
-
-/* Contact Section */
-.contact-section {
-    margin-top: 40px;
-    background-color: #ff9800;
-    padding: 30px;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 700px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.contact-section h2 {
-    font-size: 2.2em;
-    font-family: 'Fredericka the Great', cursive;
-    margin-bottom: 20px;
-}
-
-.creator {
     font-size: 1.2em;
-    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.creator a {
+.button-container button:hover {
+    background-color: #ff5722;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el meme */
+.meme-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos de contacto */
+.contact-section {
+    background-color: #ff9800;
     color: #222;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.creator a:hover {
-    color: #ff5722;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    margin-top: 30px;
 }
 
 .contact-link {
     background-color: #ff5722;
+    padding: 15px 30px;
     color: white;
-    padding: 15px;
-    border-radius: 30px;
-    font-size: 1.5em;
+    border-radius: 5px;
+    font-size: 1.3em;
     cursor: pointer;
-    margin-top: 30px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
 }
 
 .contact-link:hover {
     background-color: #ff9800;
-}
-
-/* Animaciones */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.8;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-button {
-    animation: pulse 1.5s infinite;
 }
