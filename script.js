@@ -1,11 +1,9 @@
 const excuses = [
-    "Hoy no puedo, Juanjo ha dejado caer la barra y se rompió mi motivación.",
-    "Diego está demasiado motivado, me intimida y prefiero descansar.",
-    "Adri dijo que hoy era día de descanso... y no voy a llevarle la contraria.",
-    "Ángel prometió venir, pero está en la esquina haciendo selfies.",
-    "El gimnasio está cerrado por mantenimiento... según mi imaginación.",
-    "Hoy no es mi día, el banco de press me mira mal.",
-    "Mi proteína caducó y no puedo entrenar sin ella, es mi combustible."
+    "Hoy no puedo, Juanjo dejó la barra y me fui detrás.",
+    "Diego me intimidó levantando 100kg, mejor me quedo en casa.",
+    "Adri dijo que era día de descanso, y Ángel estuvo de acuerdo.",
+    "Mi proteína se cayó al suelo... y con ella mi motivación.",
+    "El banco de press me mira raro, mejor mañana."
 ];
 
 document.getElementById("excuse-button").addEventListener("click", () => {
