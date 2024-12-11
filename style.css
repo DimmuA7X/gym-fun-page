@@ -3,11 +3,11 @@ body {
     font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: #fff;
     text-align: center;
     overflow-x: hidden;
-    animation: backgroundAnimation 10s infinite alternate;
+    animation: backgroundAnimation 12s ease infinite alternate;
 }
 
 @keyframes backgroundAnimation {
@@ -18,18 +18,20 @@ body {
 h1, h2 {
     margin: 0;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .hero {
     padding: 50px 20px;
     background: linear-gradient(135deg, #141e30, #243b55);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    animation: heroAnimation 5s infinite alternate;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    animation: heroAnimation 6s ease infinite alternate;
 }
 
 @keyframes heroAnimation {
@@ -38,45 +40,47 @@ ul {
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 4rem;
     color: #ff9800;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #ffcc80;
     margin-top: 10px;
 }
 
 .logo {
-    width: 80px;
+    width: 100px;
     vertical-align: middle;
     margin-right: 10px;
 }
 
 section {
-    margin: 20px 0;
+    margin: 20px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    animation: sectionAnimation 3s infinite alternate;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-@keyframes sectionAnimation {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
 }
 
 button {
-    padding: 15px 30px;
-    font-size: 18px;
+    padding: 15px 35px;
+    font-size: 20px;
     background-color: #ff5722;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
@@ -85,53 +89,31 @@ button:hover {
 }
 
 footer {
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 40px;
+    padding: 20px;
     background: #000;
     color: #ff9800;
-    font-size: 14px;
+    font-size: 16px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.fun-section, .jokes-section, .random-facts-section, .meme-generator, .poll-section {
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    animation: sectionAnimation 3s infinite alternate;
+footer p {
+    margin: 0;
+    font-weight: bold;
 }
-script.js
-const excuses = [
-    "Hoy no puedo, Juanjo dejó la barra y me fui detrás.",
-    "Diego me intimidó levantando 100kg, mejor me quedo en casa.",
-    "Adri dijo que era día de descanso, y Ángel estuvo de acuerdo.",
-    "Mi proteína se cayó al suelo... y con ella mi motivación.",
-    "El banco de press me mira raro, mejor mañana."
-];
 
-const workouts = [
-    {
-        name: "Rutina Básica",
-        exercises: [
-            "3x10 Sentadillas",
-            "3x10 Press de banca",
-            "3x10 Peso muerto",
-            "3x10 Dominadas",
-            "3x15 Abdominales"
-        ]
-    },
-    {
-        name: "Rutina Intermedia",
-        exercises: [
-            "4x12 Sentadillas con salto",
-            "4x12 Press militar",
-            "4x12 Peso muerto rumano",
-            "4x12 Remo con barra",
-            "4x20 Plancha"
-        ]
-    },
-    {
-        name: "Rutina Avanzada",
-        exercises: [
-            "5x15 Sentadillas búlgaras",
-           
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    button {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+}
