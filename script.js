@@ -1,110 +1,67 @@
 const excuses = [
     "Hoy no puedo, Juanjo dejó la barra y me fui detrás.",
-    "Diego me intimidó levantando 100kg, mejor me quedo en casa.",
-    "Adri dijo que era día de descanso, y Ángel estuvo de acuerdo.",
-    "Mi proteína se cayó al suelo... y con ella mi motivación.",
-    "El banco de press me mira raro, mejor mañana."
+    "Diego me intimidó con sus sentadillas y estoy sin fuerzas.",
+    "No entrené porque el gym estaba lleno de cardio.",
+    "Me caí de la bicicleta estática y no pude recuperarme.",
+    "Estaba más enfocado en la música que en el entreno."
 ];
 
 const workouts = [
-    {
-        name: "Rutina Básica",
-        exercises: [
-            "3x10 Sentadillas",
-            "3x10 Press de banca",
-            "3x10 Peso muerto",
-            "3x10 Dominadas",
-            "3x15 Abdominales"
-        ]
-    },
-    {
-        name: "Rutina Intermedia",
-        exercises: [
-            "4x12 Sentadillas con salto",
-            "4x12 Press militar",
-            "4x12 Peso muerto rumano",
-            "4x12 Remo con barra",
-            "4x20 Plancha"
-        ]
-    },
-    {
-        name: "Rutina Avanzada",
-        exercises: [
-            "5x15 Sentadillas búlgaras",
-            "5x15 Press de banca inclinado",
-            "5x15 Peso muerto sumo",
-            "5x15 Fondos en paralelas",
-            "5x30 Bicicleta"
-        ]
-    },
-    {
-        name: "Muerte 💀",
-        exercises: [
-            "6x20 Sentadillas con barra",
-            "6x20 Press de banca con mancuernas",
-            "6x20 Peso muerto convencional",
-            "6x20 Dominadas lastradas",
-            "6x50 Burpees"
-        ]
-    }
+    "Press de banca 5x5, sentadillas 3x10, remo con barra 4x8.",
+    "Press militar 5x5, deadlift 3x5, pull-ups 3x10.",
+    "Cardio HIIT 20 min, abdominales 4x20, bíceps curls 4x12.",
+    "Lunges 3x15, pull-over 4x10, crunches 4x20."
 ];
 
 const jokes = [
-    "¿Por qué los culturistas no usan ascensor? Porque prefieren subir el nivel.",
-    "¿Qué hace un culturista después de romper con su pareja? Levantar su ánimo... y pesas.",
-    "¿Cuál es el ejercicio favorito de un culturista? El press... de impresionar.",
-    "¿Por qué los culturistas no pueden guardar secretos? Porque siempre están levantando sospechas.",
-    "¿Qué hace un culturista en la playa? Levantar arena."
+    "¿Qué hace un pez en el gimnasio? ¡Pesca músculo!",
+    "¿Por qué el gym nunca está vacío? ¡Porque siempre hay alguien levantando pesas!",
+    "¿Cómo se llama el ejercicio más triste? Cardio…",
+    "El único músculo que crece sin esfuerzo es el ego."
 ];
 
 const facts = [
-    "El músculo más fuerte del cuerpo humano es el masetero, que se encuentra en la mandíbula.",
-    "El récord mundial de levantamiento de pesas es de más de 500 kg.",
-    "El culturismo moderno comenzó en el siglo XIX con Eugen Sandow, conocido como el 'padre del culturismo'.",
-    "El ejercicio regular puede mejorar tu estado de ánimo y reducir los síntomas de depresión y ansiedad.",
-    "El músculo más grande del cuerpo humano es el glúteo mayor."
+    "Los Mega Boys pueden hacer más repeticiones de las que creemos... ¡y con estilo!",
+    "El gimnasio no está completo sin una buena playlist de rock para entrenar.",
+    "El entrenamiento no termina hasta que te haces un selfie en el espejo.",
+    "Algunos dicen que los Mega Boys no sudan... ¡simplemente brillan más!"
 ];
 
 const memes = [
-    "https://i.imgur.com/1J7Z5Qp.jpg",
-    "https://i.imgur.com/2Y7Z5Qp.jpg",
-    "https://i.imgur.com/3Z7Z5Qp.jpg",
-    "https://i.imgur.com/4A7Z5Qp.jpg",
-    "https://i.imgur.com/5B7Z5Qp.jpg"
+    "https://via.placeholder.com/500x300/ff9800/ffffff?text=Los+Mega+Boys+en+acción!",
+    "https://via.placeholder.com/500x300/ff5722/ffffff?text=No+hay+descanso+para+los+Mega+Boys!"
 ];
 
-document.getElementById("excuse-button").addEventListener("click", () => {
-    const randomIndex = Math.floor(Math.random() * excuses.length);
-    document.getElementById("excuse-output").innerText = excuses[randomIndex];
+document.getElementById("excuse-button").addEventListener("click", function() {
+    const randomExcuse = excuses[Math.floor(Math.random() * excuses.length)];
+    document.getElementById("excuse-output").textContent = randomExcuse;
 });
 
-document.getElementById("workout-button").addEventListener("click", () => {
-    const randomIndex = Math.floor(Math.random() * workouts.length);
-    const workout = workouts[randomIndex];
-    document.getElementById("workout-output").innerHTML = `<strong>${workout.name}</strong><br>${workout.exercises.join('<br>')}`;
+document.getElementById("workout-button").addEventListener("click", function() {
+    const randomWorkout = workouts[Math.floor(Math.random() * workouts.length)];
+    document.getElementById("workout-output").textContent = randomWorkout;
 });
 
-document.getElementById("join-fanclub-button").addEventListener("click", () => {
-    document.getElementById("fanclub-output").innerText = "¡Bienvenido al club de fans de los Mega Boys! 🎉";
+document.getElementById("joke-button").addEventListener("click", function() {
+    const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+    document.getElementById("joke-output").textContent = randomJoke;
 });
 
-document.getElementById("joke-button").addEventListener("click", () => {
-    const randomIndex = Math.floor(Math.random() * jokes.length);
-    document.getElementById("joke-output").innerText = jokes[randomIndex];
+document.getElementById("fact-button").addEventListener("click", function() {
+    const randomFact = facts[Math.floor(Math.random() * facts.length)];
+    document.getElementById("fact-output").textContent = randomFact;
 });
 
-document.getElementById("fact-button").addEventListener("click", () => {
-    const randomIndex = Math.floor(Math.random() * facts.length);
-    document.getElementById("fact-output").innerText = facts[randomIndex];
+document.getElementById("meme-button").addEventListener("click", function() {
+    const randomMeme = memes[Math.floor(Math.random() * memes.length)];
+    document.getElementById("meme-output").innerHTML = `<img src="${randomMeme}" alt="Meme Mega Boys" />`;
 });
 
-document.getElementById("meme-button").addEventListener("click", () => {
-    const randomIndex = Math.floor(Math.random() * memes.length);
-    document.getElementById("meme-output").innerHTML = `<img src="${memes[randomIndex]}" alt="Meme divertido" style="max-width: 100%; height: auto;">`;
+document.getElementById("poll-button").addEventListener("click", function() {
+    const pollAnswer = "Press de banca, ¡sin duda!";
+    document.getElementById("poll-output").textContent = pollAnswer;
 });
 
-document.getElementById("poll-button").addEventListener("click", () => {
-    const exercises = ["Sentadillas", "Press de banca", "Peso muerto", "Dominadas", "Abdominales"];
-    const randomIndex = Math.floor(Math.random() * exercises.length);
-    document.getElementById("poll-output").innerText = `¡Gracias por votar! Tu ejercicio favorito es: ${exercises[randomIndex]}`;
+document.getElementById("join-fanclub-button").addEventListener("click", function() {
+    document.getElementById("fanclub-output").textContent = "¡Bienvenido al club de fans de Mega Boys! ¡Vamos por esos músculos!";
 });
