@@ -1,8 +1,9 @@
 const excuses = [
-    "Hoy no puedo, Juanjo dejó la barra y me fui detrás.",
-    "Diego me intimidó con sus sentadillas y estoy sin fuerzas.",
-    "No entrené porque el gym estaba lleno de cardio.",
-    "Me caí de la bicicleta estática y no pude recuperarme.",
+    "No entrené porque me quedé dormido con el teléfono en la mano.",
+    "Estaba muy cansado después de levantar demasiadas pesas.",
+    "El gimnasio estaba lleno y no me sentía cómodo.",
+    "Olvidé las zapatillas de deporte en casa.",
+    "Me lastimé con el estiramiento y ahora solo miro los pesos.",
     "Estaba más enfocado en la música que en el entreno."
 ];
 
@@ -64,4 +65,8 @@ document.getElementById("poll-button").addEventListener("click", function() {
 
 document.getElementById("join-fanclub-button").addEventListener("click", function() {
     document.getElementById("fanclub-output").textContent = "¡Bienvenido al club de fans de Mega Boys! ¡Vamos por esos músculos!";
+});
+
+document.getElementById("contact-link").addEventListener("click", function() {
+    alert("¡Gracias por contactarnos! ¡Nos encanta conectar con nuestros fans!");
 });
