@@ -1,25 +1,28 @@
 body {
-    font-family: 'Impact', sans-serif;
-    background: linear-gradient(to bottom, #222, #000);
-    color: #fff;
+    font-family: 'Courier New', monospace;
+    background: url('assets/gym-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ff0000;
+    text-shadow: 1px 1px 2px black;
     margin: 0;
     padding: 0;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 header {
-    background-color: #ff5722;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     text-align: center;
-    font-size: 2.5em;
-    color: #000;
-    text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+    font-size: 3em;
+    color: #ff9800;
+    text-transform: uppercase;
 }
 
 .content {
     padding: 20px;
     max-width: 800px;
     margin: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
 }
 
 .button-container {
@@ -30,29 +33,29 @@ header {
 }
 
 .button-container button {
-    background-color: #ff9800;
+    background-color: #ff0000;
     color: white;
     padding: 10px 20px;
     margin: 10px;
     border: none;
     font-size: 1.2em;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
 .button-container button:hover {
     background-color: #ff5722;
-    transform: translateY(-2px);
+    transform: scale(1.1);
 }
 
 .output-box {
-    background-color: rgba(255, 152, 0, 0.2);
+    background-color: rgba(255, 0, 0, 0.2);
     padding: 10px;
     margin: 10px 0;
+    border: 2px solid #ff0000;
     border-radius: 5px;
-    border-left: 5px solid #ff9800;
 }
 
 #meme-output img {
@@ -60,17 +63,18 @@ header {
     max-width: 500px;
     margin: 10px auto;
     display: block;
+    border: 5px solid #ff0000;
 }
 
 .contact-section {
-    background-color: #ff9800;
-    color: #222;
+    background-color: rgba(255, 152, 0, 0.8);
+    color: black;
     text-align: center;
     padding: 20px;
     font-size: 1.5em;
     border-radius: 10px;
     margin-top: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
 .contact-section h2 {
@@ -85,7 +89,7 @@ header {
 }
 
 .contact-section .creator a {
-    color: #222;
+    color: black;
     text-decoration: none;
 }
 
@@ -107,6 +111,6 @@ header {
 }
 
 .contact-link:hover {
-    background-color: #ff9800;
+    background-color: #ff0000;
     transform: scale(1.05);
 }
